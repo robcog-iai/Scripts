@@ -23,6 +23,6 @@ with unreal.ScopedSlowTask(len(all_actors), "Removing Products Randomly") as slo
 		
 		name = act.get_name()
 		rand = random.randint(1,100)
-		if(name.startswith("SM_ProductWithAN") and rand < 25):
+		if(name.startswith("SM_ProductWithAN") and rand < 75):
 			unreal.log_warning("delete {}".format(name))
-			#act.destroy_actor()
+			act.destroy_actor()
